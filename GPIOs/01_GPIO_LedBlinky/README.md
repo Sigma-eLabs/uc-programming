@@ -80,7 +80,7 @@ Sau khi thực hiện compile và flash code lên [Tiva C Series TM4C123G Launch
   </a>
 </p>
 
-Đối với setup hiện tại cho hàm delay() thì LED đỏ nhấp nháy với tần số cao, đến đến hiệu ứng lưu ảnh trong mắt mà ta không thể thấy được LED đang thực sự nhấp nháy. Để có thể thấy được bằng mắt, các bạn có thể tăng iteration đầu vào của hàm và quan sát kết quả.
+Đối với setup hiện tại cho hàm delay() thì LED đỏ nhấp nháy với tần số cao, dẫn đến hiệu ứng lưu ảnh trong mắt mà ta không thể thấy được LED đang thực sự nhấp nháy. Để có thể thấy được bằng mắt, các bạn có thể tăng giá trị iteration đầu vào của hàm và quan sát kết quả.
 <p align="center">
   <a href="." title="Red LED Blinky">
     <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
