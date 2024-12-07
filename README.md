@@ -19,13 +19,12 @@ The topics may be simple, but I believe that it is a launchpad for you to approa
 </p>
 
 # Topics
-Summary of the topics already available:
+Summary of the topics are already available:
 * [GPIOs](/GPIOs/) - GPIO module
 
 # Requisitions
 ## Hardware
-Development Kit will be used in the most of topics is [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). The main microcontroller on the development kit is ARM Cortex-M4F 32-bit produced by Texas Instruments. Moreover, there is on-board Debugger/Programmer (Stellaris ICDI) that enable user quickly flashes and debugs easily.
-
+Development Kit used in the most of topics is [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). The main microcontroller on the development kit is ARM Cortex-M4F 32-bit produced by Texas Instruments. Moreover, there is on-board Debugger/Programmer (Stellaris ICDI) that enable user quickly flashes and debugs easily.
 <p align="center">
   <a href="." title="Tiva C Series TM4C123G LaunchPad Evaluation Kit">
     <img src="/Assets/ek-tm4c123gxl.png" title="Tiva C Series TM4C123G LaunchPad Evaluation Kit" style="min-width: 200px"/>
@@ -40,7 +39,7 @@ Additionally, during testing và debugging, I also use Logic Analyzer to measure
 </p>
 
 ## Software
-[Keil C](https://www.keil.com/demo/eval/arm.htm) là an IDE developed by ARM company. It is a very powerful tool supports software engineer to compose, edit, compile, flash code and debug. Especially, with non-comercial version, I think it fully supports all your needs to study and research.
+[Keil C](https://www.keil.com/demo/eval/arm.htm) is an IDE developed by ARM company. It is a very powerful tool supports software engineer to compose, edit, compile, flash code and debug. Especially, with non-comercial version, I think it fully supports all your needs to study and research.
 <p align="center">
   <a href="." title="Keil C">
     <img src="/Assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
@@ -59,6 +58,7 @@ To visualize the measured signals of microcontroller pins from Logic Analyzer an
 * [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf)
 * [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS)
 * [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl)
+
 # Assumptions
 When I'm doing this series, I have below assumptions:
 * Reader has a basic knowledge of C programming language.
