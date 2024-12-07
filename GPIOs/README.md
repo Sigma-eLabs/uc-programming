@@ -5,19 +5,18 @@
 </p>
 
 # GPIO Lessons
-* [GPIO Led Blinky](/GPIOs/01_GPIO_LedBlinky/) - Tạo sóng PWM và nhấp nháy Led
+* [GPIO Led Blinky](/GPIOs/01_GPIO_LedBlinky/) - Perform blinking LED and generating simple PWM waveform with specific duty cycle.
 
 # Requisitions
 ## Hardware
-Kit phát triển được sửa dụng đa số trong các chủ đề là [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). Vi xử lý chính trên kit là ARM Cortex-M4F được sản xuất bởi Texas Instruments. Trên kit còn có một mạch Debugger/Programmer (Stellaris ICDI) cho phép người dùng dễ dàng nạp code, debug một cách dễ dàng.
-
+Development Kit used in the most of topics is [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). The main microcontroller on the development kit is ARM Cortex-M4F 32-bit produced by Texas Instruments. Moreover, there is on-board Debugger/Programmer (Stellaris ICDI) that enable user quickly flashes and debugs easily.
 <p align="center">
   <a href="." title="Tiva C Series TM4C123G LaunchPad Evaluation Kit">
     <img src="/Assets/ek-tm4c123gxl.png" title="Tiva C Series TM4C123G LaunchPad Evaluation Kit" style="min-width: 200px"/>
   </a>
 </p>
 
-Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Analyzer để đo tín hiệu điện trên các chân của vi điều khiển.
+Additionally, during testing và debugging, I also use Logic Analyzer to measure and capture the signal of microcontroller input/output pins.
 <p align="center">
   <a href="." title="Logic Analyzer">
     <img src="/Assets/LogicAnalyzer.png" title="Logic Analyzer" style="min-width: 200px"/>
@@ -25,14 +24,14 @@ Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Ana
 </p>
 
 ## Software
-[Keil C](https://www.keil.com/demo/eval/arm.htm) là một IDE được phát triển bởi Arm. Đây là một công cụ mạnh mẽ để giúp các lập trình viên soạn thảo code, biên dịch chương trình, nạp code và debug. Đặc biệt hơn, với phiên bản miễn phí thì nó có thể đáp ứng hầu như mọi nhu cầu học tập và nghiên cứu của các bạn.
+[Keil C](https://www.keil.com/demo/eval/arm.htm) is an IDE developed by ARM company. It is a very powerful tool supports software engineer to compose, edit, compile, flash code and debug. Especially, with non-comercial version, I think it fully supports all your needs to study and research.
 <p align="center">
   <a href="." title="Keil C">
     <img src="/Assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
-Để có thể quan sát và ghi lại các tính hiệu điện trên các chân của vi điều khiển được thu thập từ Logic Analyze một cách trực quan, thì phần mềm [Logic 2](https://www.saleae.com/pages/downloads) là sự lựa chọn phù hợp.
+To visualize the measured signals of microcontroller pins from Logic Analyzer and easy to analyze the logs, [Logic 2](https://www.saleae.com/pages/downloads) tool is one of the suitable choices.
 <p align="center">
   <a href="." title="Logic 2">
     <img src="/Assets/Logic2.PNG" title="Logic 2" style="width: 100vw; min-width: 200px"/>
@@ -44,8 +43,14 @@ Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Ana
 * [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf)
 * [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS)
 * [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl)
+
 # Assumptions
-Khi thực hiện loạt chủ đề này, mình giả định các bạn đã có kiến thức cơ bản về lập trình ngôn C và vi điều khiển. Đối tương nghiên cứu là Tiva™ TM4C123GH6PM Microcontroller và Tiva C Series TM4C123G LaunchPad Evaluation Kit.
+When I'm doing this series, I have below assumptions:
+* Reader has a basic knowledge of C programming language.
+* Reader has a knwledge about microcontroller hardware.
+* The target objects are used: Tiva™ TM4C123GH6PM Microcontroller và Tiva C Series TM4C123G LaunchPad Evaluation Kit.
 
 # Contact & Discussion
-Vui lòng liên hệ [Sigma eLabs](https://github.com/Sigma-eLabs) qua email: [Ho Thien Ai](mailto:thienaiho95@gmail.com) để đóng góp ý kiến và trao đổi. Mình rất trân trọng và chân thành cảm ơn!
+If you have any thing would like to discuss or cooperate with me, please don't hesitate to contact me via:
+* Email [Ho Thien Ai](mailto:thienaiho95@gmail.com)
+* LinkedIn [Thien Ai Ho](https://www.linkedin.com/in/thien-ai-ho/).
