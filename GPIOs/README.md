@@ -5,6 +5,7 @@
 </p>
 
 # GPIO Lessons
+Summary of the topics are already available for GPIO:
 * [GPIO Led Blinky](/GPIOs/01_GPIO_LedBlinky/) - Perform blinking LED and generating simple PWM waveform with specific duty cycle.
 
 # Requisitions
