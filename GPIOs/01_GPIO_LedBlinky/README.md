@@ -4,8 +4,8 @@
   </a>
 </p>
 
-# GPIO LED Blinky
-Tạo sóng PWM và nhấp nháy Led.
+# GPIO LED Blinky and Generate PWM 
+Perform blinking LED and generating simple PWM waveform with specific duty cycle.
 <p align="center">
   <a href="." title="Red LED Blinky">
     <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
@@ -13,7 +13,7 @@ Tạo sóng PWM và nhấp nháy Led.
 </p>
 
 # General Requirements
-Thiết kế một chương trình điều khiển chân GPIO để tạo sóng PWM với duty cycle 62.5%.
+Design a software that performs controlling the GPIO pin to blink red LED and generating PWM waveform with duty cycle 62.5%.
 
 # Requisitions
 ## Hardware
@@ -24,7 +24,7 @@ Thiết kế một chương trình điều khiển chân GPIO để tạo sóng 
 * [Keil C](https://www.keil.com/demo/eval/arm.htm)
 * [Logic 2](https://www.saleae.com/pages/downloads)
 
-Lưu ý: Các bạn có thể thực hiện dự án này với hardware, software khác vì ở trên chỉ là sự lựa chọn cá nhân. Mục tiêu ta cần tập trung đó chính là giải quyết yêu cầu ở [General Requirements](#general-requirements).
+Note: For this project, you can choose your own hardware and software. It doesn't matter, because the selection is personal choice. The main purpose needs to be focused is resolving the problem in [General Requirements](#general-requirements) and the knowledge you get after this lesson. You can try to do the similar thing on the different hardware and software.
 
 ## Documents
 * [Tiva™ C Series TM4C123G LaunchPad Evaluation Board User's Guide](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/spmu296.pdf)
@@ -33,11 +33,11 @@ Lưu ý: Các bạn có thể thực hiện dự án này với hardware, softwa
 * [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl)
 
 # Implementation
-* Để hiện hiện thực bài này, các bạn nên đọc [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf), các chương liên quan đến GPIO module, System Control module để biết được chức năng của các thanh ghi phổ biến. Ví dụ: GPIODATA, GPIODIR, GPIODEN, RCGCGPIO, GPIOHBCTL.
+* To implement this software, you should read [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf), the chapters related to GPIO, System Control modules to know about the functionality of common registers. Example: GPIODATA, GPIODIR, GPIODEN, RCGCGPIO, GPIOHBCTL.
 
-* Các bạn nên đọc thêm [Tiva™ C Series TM4C123G LaunchPad Evaluation Board User's Guide](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/spmu296.pdf) để biết được thiết kế hardware của Developmment Kit đang sử dụng.
+* You also should read [Tiva™ C Series TM4C123G LaunchPad Evaluation Board User's Guide](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/spmu296.pdf) to know about the hardware design of the development kit which is being used.
 
-* Thêm nữa, bạn cần phải học cách sử dụng thư viện chuẩn được cung cấp như [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl) hỗ trợ cho dòng Arm-Cortex và TM4C123GHPM controller.
+* Additionally, you understand and know how to use the provided standard libraries like [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl), which support Arm-Cortex architecture processor and TM4C123GHPM controller.
 
 * :rocket:  Source Code: [Gpio_LedBlinky](/GPIOs/01_GPIO_LedBlinky/Gpio_LedBlinky/) :rocket:
 ```C
@@ -45,9 +45,9 @@ Lưu ý: Các bạn có thể thực hiện dự án này với hardware, softwa
 
 /* delay for interations  */
 void delay(uint32_t volatile iter) {
-	while(iter > 0U){
+	 while(iter > 0U){
 		--iter;
-	}
+	 }
 }
 
 /*--------------------------------------*/
@@ -62,10 +62,10 @@ GPIOF_AHB->DEN |= LED_RED; /* configure PF1 pin - red LED with digital mode */
 
 /* endless loop inside main() function */
 while (1) {
-  GPIOF_AHB->DATA_Bits[LED_RED] = LED_RED; /* turn on PF1 pin - red LED on */
-  delay(5000); /* delay for 5000 interations */
-  GPIOF_AHB->DATA_Bits[LED_RED] = ~LED_RED; /* turn on PF1 pin - red LED on */
-  delay(3000); /* delay for 3000 interations */
+	GPIOF_AHB->DATA_Bits[LED_RED] = LED_RED; /* turn on PF1 pin - red LED on */
+	delay(5000); /* delay for 5000 interations */
+	GPIOF_AHB->DATA_Bits[LED_RED] = ~LED_RED; /* turn on PF1 pin - red LED on */
+	delay(3000); /* delay for 3000 interations */
 }
 
 /*--------------------------------------*/
@@ -73,22 +73,26 @@ while (1) {
 ```
 
 # Deployment
-Sau khi thực hiện compile và flash code lên [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL), tiến hành debug và test thì mình thu được kết quả đo bằng Logic Analyzer trên chân PF1 - LED đỏ, như sau:
+After composed the source code, compiled and flashed it on [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL), I started to debug and test my code. The actual result are measured by Logic Analyzer on PF1 pin - red LED, see as below:
 <p align="center">
   <a href="." title="PWM Waveform">
     <img src="/GPIOs/01_GPIO_LedBlinky/PWM_Waveform.png" title="PWM Waveform" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
-Đối với setup hiện tại cho hàm delay() thì LED đỏ nhấp nháy với tần số cao, dẫn đến hiệu ứng lưu ảnh trong mắt mà ta không thể thấy được LED đang thực sự nhấp nháy. Để có thể thấy được bằng mắt, các bạn có thể tăng giá trị iteration đầu vào của hàm và quan sát kết quả.
+You can see that the software sastifies general requirements.
+
+With the current setup of delay() function, read LED is blinked with the high frequency, that leads to can't see the it's blinking by eyes. To observe by eyes clearly, I suggest you should increase the value of iter paramter, an input of delay() function, and see the wonderful result.
 <p align="center">
   <a href="." title="Red LED Blinky">
     <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
   </a>
 </p>
 
-Chúc các bạn thành công!
+I believe that you'll do it great!
 # Contact & Discussion
-Vui lòng liên hệ [Sigma eLabs](https://github.com/Sigma-eLabs) qua email: [Ho Thien Ai](mailto:thienaiho95@gmail.com) để đóng góp ý kiến và trao đổi. Mình rất trân trọng và chân thành cảm ơn!
+If you have any thing would like to discuss or cooperate with me, please don't hesitate to contact me via:
+* Email [Ho Thien Ai](mailto:thienaiho95@gmail.com)
+* LinkedIn [Thien Ai Ho](https://www.linkedin.com/in/thien-ai-ho/).
 
-
+I'm always welcome your ideas and thank for your insteresting!
