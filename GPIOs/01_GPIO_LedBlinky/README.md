@@ -6,20 +6,23 @@
 
 # GPIO LED Blinky
 Tạo sóng PWM và nhấp nháy Led.
+<p align="center">
+  <a href="." title="Red LED Blinky">
+    <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
+  </a>
+</p>
 
 # General Requirements
 Thiết kế một chương trình điều khiển chân GPIO để tạo sóng PWM với duty cycle 62.5%.
 
 # Requisitions
 ## Hardware
-Kit phát triển được sửa dụng đa số trong các chủ đề là [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). Vi xử lý chính trên kit là ARM Cortex-M4F được sản xuất bởi Texas Instruments. Trên kit còn có một mạch Debugger/Programmer (Stellaris ICDI) cho phép người dùng dễ dàng nạp code, debug một cách dễ dàng.
-
-Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Analyzer để đo tín hiệu điện trên các chân của vi điều khiển.
+* [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL)
+* Logic Analyzer
 
 ## Software
-[Keil C](https://www.keil.com/demo/eval/arm.htm) là một IDE được phát triển bởi Arm. Đây là một công cụ mạnh mẽ để giúp các lập trình viên soạn thảo code, biên dịch chương trình, nạp code và debug. Đặc biệt hơn, với phiên bản miễn phí thì nó có thể đáp ứng hầu như mọi nhu cầu học tập và nghiên cứu của các bạn.
-
-Để có thể quan sát và ghi lại các tính hiệu điện trên các chân của vi điều khiển được thu thập từ Logic Analyze một cách trực quan, thì phần mềm [Logic 2](https://www.saleae.com/pages/downloads) là sự lựa chọn phù hợp.
+* [Keil C](https://www.keil.com/demo/eval/arm.htm)
+* [Logic 2](https://www.saleae.com/pages/downloads)
 
 Lưu ý: Các bạn có thể thực hiện dự án này với hardware, software khác vì ở trên chỉ là sự lựa chọn cá nhân. Mục tiêu ta cần tập trung đó chính là giải quyết yêu cầu ở [General Requirements](#general-requirements).
 
@@ -28,17 +31,15 @@ Lưu ý: Các bạn có thể thực hiện dự án này với hardware, softwa
 * [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf)
 * [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS)
 * [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl)
-# Assumptions
-Khi thực hiện chủ đề này, mình giả định các bạn đã có kiến thức cơ bản về lập trình ngôn C và vi điều khiển. Đối tương nghiên cứu là Tiva™ TM4C123GH6PM Microcontroller và Tiva C Series TM4C123G LaunchPad Evaluation Kit.
 
 # Implementation
-Để hiện hiện thực bài này, các bạn nên đọc [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf), các chương liên quan đến GPIO module, System Control module để biết được chức năng của các thanh ghi phổ biến. Ví dụ: GPIODATA, GPIODIR, GPIODEN, RCGCGPIO, GPIOHBCTL.
+* Để hiện hiện thực bài này, các bạn nên đọc [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/tm4c123gh6pm.pdf), các chương liên quan đến GPIO module, System Control module để biết được chức năng của các thanh ghi phổ biến. Ví dụ: GPIODATA, GPIODIR, GPIODEN, RCGCGPIO, GPIOHBCTL.
 
-Đọc thêm [Tiva™ C Series TM4C123G LaunchPad Evaluation Board User's Guide](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/spmu296.pdf) để biết được thiết kế hardware của Developmment Kit đang sử dụng.
+* Các bạn nên đọc thêm [Tiva™ C Series TM4C123G LaunchPad Evaluation Board User's Guide](https://github.com/Sigma-eLabs/technical-resources/blob/main/tiva-c-series/spmu296.pdf) để biết được thiết kế hardware của Developmment Kit đang sử dụng.
 
-Thêm nữa, bạn cần phải học cách sử dụng thư viện chuẩn được cung cấp như [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl) hỗ trợ cho dòng Arm-Cortex và TM4C123GHPM controller.
+* Thêm nữa, bạn cần phải học cách sử dụng thư viện chuẩn được cung cấp như [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl) hỗ trợ cho dòng Arm-Cortex và TM4C123GHPM controller.
 
-:rocket:  Source Code: [Gpio_LedBlinky](/GPIOs/01_GPIO_LedBlinky/Gpio_LedBlinky/)
+* :rocket:  Source Code: [Gpio_LedBlinky](/GPIOs/01_GPIO_LedBlinky/Gpio_LedBlinky/) :rocket:
 ```C
 /*--------------------------------------*/
 
@@ -48,6 +49,14 @@ void delay(uint32_t volatile iter) {
 		--iter;
 	}
 }
+
+/*--------------------------------------*/
+
+/* Configuration for modules to enable their functions */
+SYSCTL->RCGCGPIO  |= (1U << 5); /* enable Run mode for GPIOF */
+SYSCTL->GPIOHBCTL |= (1U << 5); /* enable AHB bus for GPIOF */
+GPIOF_AHB->DIR |= LED_RED; /* configure PF1 pin - red LED as output pin */
+GPIOF_AHB->DEN |= LED_RED; /* configure PF1 pin - red LED with digital mode */
 
 /*--------------------------------------*/
 
@@ -63,7 +72,7 @@ while (1) {
 
 ```
 
-# Deploy
+# Deployment
 Sau khi thực hiện compile và flash code lên [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL), tiến hành debug và test thì mình thu được kết quả đo bằng Logic Analyzer trên chân PF1 - LED đỏ, như sau:
 <p align="center">
   <a href="." title="PWM Waveform">

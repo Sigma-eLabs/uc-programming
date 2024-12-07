@@ -12,7 +12,7 @@ void delay(uint32_t volatile iter);
 
 int main(void) {
 	
-	/* initialization */
+	/* Configuration for modules to enable their functions */
 	SYSCTL->RCGCGPIO  |= (1U << 5); /* enable Run mode for GPIOF */
     SYSCTL->GPIOHBCTL |= (1U << 5); /* enable AHB bus for GPIOF */
     GPIOF_AHB->DIR |= LED_RED; /* configure PF1 pin - red LED as output pin */
