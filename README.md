@@ -1,10 +1,10 @@
-Được thực hiện bởi Sigma-eLabs
 <p align="center">
   <a href="." title="Sigma eLabs">
     <img src="/Assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
+Repository này sẽ tập trung vào việc làm quen với lập trình vi điều khiển: đọc hiểu tài liệu, tương tác với các thanh ghi, sử dụng các module của vi điều khiển để thực hiện một yêu cầu thực tế. Các chủ đề có thể vô cùng đơn giản, nhưng mình tin rằng nó sẽ là nền tảng để các bạn có thể tiếp cận với các chủ đề phức tạp hơn trong thế giới lập trình nhúng.
 # uc-programming 
 
 <p align="center">
@@ -12,6 +12,10 @@
     <img src="/Assets/uCprogramming.png" title="Microcontroller Programming" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
+
+# Topics
+Điểm qua các loạt bài đã được thực hiện:
+* [GPIOs](/GPIOs/)
 
 # Requisitions
 ## Hardware
@@ -23,7 +27,7 @@ Kit phát triển được sửa dụng đa số trong các chủ đề là [Tiv
   </a>
 </p>
 
-Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Analyzer (phiên bản shoppee) để đo tín hiệu điện trên các chân của vi điều khiển.
+Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Analyzer để đo tín hiệu điện trên các chân của vi điều khiển.
 <p align="center">
   <a href="." title="Logic Analyzer">
     <img src="/Assets/LogicAnalyzer.png" title="Logic Analyzer" style="min-width: 200px"/>
@@ -34,7 +38,7 @@ Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Ana
 [Keil C](https://www.keil.com/demo/eval/arm.htm) là một IDE được phát triển bởi Arm. Đây là một công cụ mạnh mẽ để giúp các lập trình viên soạn thảo code, biên dịch chương trình, nạp code và debug. Đặc biệt hơn, với phiên bản miễn phí thì nó có thể đáp ứng hầu như mọi nhu cầu học tập và nghiên cứu của các bạn.
 <p align="center">
   <a href="." title="Keil C">
-    <img src="/Assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
+    <img src="/Assets/KeilC.png" title="Keil C" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 

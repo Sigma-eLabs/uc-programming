@@ -5,13 +5,8 @@
   </a>
 </p>
 
-# GPIO Section
-
-<p align="center">
-  <a href="." title="Microcontroller Programming">
-    <img src="/Assets/uCprogramming.png" title="Microcontroller Programming" style="width: 100vw; min-width: 200px"/>
-  </a>
-</p>
+# GPIO Lessons
+* [GPIO Led Blinky](/GPIOs/01_GPIO_LedBlinky/) - Tạo sóng PWM và nhấp nháy Led
 
 # Requisitions
 ## Hardware
@@ -34,7 +29,7 @@ Ngoài ra, trong quá trình testing và debug, mình còn dùng thêm Logic Ana
 [Keil C](https://www.keil.com/demo/eval/arm.htm) là một IDE được phát triển bởi Arm. Đây là một công cụ mạnh mẽ để giúp các lập trình viên soạn thảo code, biên dịch chương trình, nạp code và debug. Đặc biệt hơn, với phiên bản miễn phí thì nó có thể đáp ứng hầu như mọi nhu cầu học tập và nghiên cứu của các bạn.
 <p align="center">
   <a href="." title="Keil C">
-    <img src="/Assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
+    <img src="/Assets/KeilC.png" title="Keil C" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
