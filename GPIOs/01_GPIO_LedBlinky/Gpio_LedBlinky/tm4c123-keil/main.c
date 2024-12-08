@@ -1,3 +1,21 @@
+/*----------------------------------------------------------------------------------*/
+/* Copyright (C) 2024 Sigma eLabs, <https:/github.com/Sigma-eLabs>.                 */
+/*                                                                                  */
+/*                               S i g m a  e L a b s                               */
+/*                    -------------------------------------------                   */
+/*                    Embedded Software Education & Research Labs                   */
+/*                                                                                  */
+/* This is an opened source software for studying and researching purposes with     */
+/* a non-comercial license.                                                         */
+/*                                                                                  */
+/* However, redistributions in source code must retain this top-level               */
+/* comment block, to respect the contributions of the Sigma eLabs's authors.        */
+/*                                                                                  */
+/* Contact information:                                                             */
+/*  <thienaiho95@gmail.com>                                                         */
+/*  <https:/www.linkedin.com/in/thien-ai-ho>                                        */
+/*----------------------------------------------------------------------------------*/
+
 #include <stdint.h> /* standard integers library */
 #include "TM4C123GH6PM.h" /* the TM4C MCU Peripheral Access Layer (TI) */
 
