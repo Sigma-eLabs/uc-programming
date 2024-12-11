@@ -1,6 +1,6 @@
 <p align="center">
   <a href="." title="Sigma eLabs">
-    <img src="/Assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
@@ -8,7 +8,7 @@
 Perform blinking LED for a while when identify the interrupt triggered from GPIO pin.
 <p align="center">
   <a href="." title="GPIO Interrupt with on-board button pressed">
-    <img src="/GPIOs/02_GPIO_InterruptionButtonPressed/InterruptButtonPressedSetup.png" title="GPIO Interrupt with on-board button pressed" style="min-width: 200px"/>
+    <img src="/gpio/gpio-interrupt-button-pressed/InterruptButtonPressedSetup.png" title="GPIO Interrupt with on-board button pressed" style="min-width: 200px"/>
   </a>
 </p>
 
@@ -39,7 +39,7 @@ Note: For this project, you can choose your own hardware and software. It doesn'
 
 * Additionally, you understand and know how to use the provided standard libraries like [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl), which support Arm-Cortex architecture processor and TM4C123GHPM controller.
 
-* :rocket:  Source Code: [GPIO_InterruptionButtonPressed](/GPIOs/02_GPIO_InterruptionButtonPressed/Gpio_InterruptionButtonPressed/) :rocket:
+* :rocket:  Source Code: [gpio_interrupt_button_project](/gpio/gpio-interrupt-button-pressed/gpio_interrupt_button_project/) :rocket:
 
 * I define a new enumeration type for button state and creat one variable to store its state.
   ```C
@@ -99,21 +99,21 @@ After composed the source code, compiled and flashed it on [Tiva C Series TM4C12
 Firstly, I check if the interrupt is trigger after the User button switch is pressed. The interrupt handler function is invoked as expectation. Inside of the interrupt handler function, the software check if the interrupt source is from PF4 pin and signal the information that the user button 1 is pressed:
 <p align="center">
   <a href="." title="Interrupt Trigged">
-    <img src="/GPIOs/02_GPIO_InterruptionButtonPressed/InterruptTrigged.png" title="Interrupt Trigged" style="width: 100vw; min-width: 200px"/>
+    <img src="/gpio/gpio-interrupt-button-pressed/InterruptTrigged.png" title="Interrupt Trigged" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
 Secondly, the main function check if the user button switch 1 is pressed, then invokes the application.
 <p align="center">
   <a href="." title="Application Invoked">
-    <img src="/GPIOs/02_GPIO_InterruptionButtonPressed/ApplicationInvoked.png" title="Application Invoked" style="width: 100vw; min-width: 200px"/>
+    <img src="/gpio/gpio-interrupt-button-pressed/ApplicationInvoked.png" title="Application Invoked" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
 The actual result are measured by Logic Analyzer on User User button switch 1 - PF4 pin and red LED - PF1 pin, see as below:
 <p align="center">
   <a href="." title="Signals Measurement">
-    <img src="/GPIOs/02_GPIO_InterruptionButtonPressed/SignalsMeasurement.PNG" title="Signals Measurement" style="width: 100vw; min-width: 200px"/>
+    <img src="/gpio/gpio-interrupt-button-pressed/SignalsMeasurement.PNG" title="Signals Measurement" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 

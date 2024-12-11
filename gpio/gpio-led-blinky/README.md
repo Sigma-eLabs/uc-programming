@@ -1,6 +1,6 @@
 <p align="center">
   <a href="." title="Sigma eLabs">
-    <img src="/Assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
@@ -8,7 +8,7 @@
 Perform blinking LED and generating simple PWM waveform with specific duty cycle.
 <p align="center">
   <a href="." title="Red LED Blinky">
-    <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
+    <img src="/gpio/gpio-led-blinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
   </a>
 </p>
 
@@ -39,7 +39,7 @@ Note: For this project, you can choose your own hardware and software. It doesn'
 
 * Additionally, you understand and know how to use the provided standard libraries like [Cortex Microcontroller Software Interface Standard (CMSIS)](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/CMSIS), [Tiva™ TM4C123GH6PM Microcontroller Software Support Package](https://github.com/Sigma-eLabs/technical-resources/tree/main/tiva-c-series/ek-tm4c123gxl), which support Arm-Cortex architecture processor and TM4C123GHPM controller.
 
-* :rocket:  Source Code: [Gpio_LedBlinky](/GPIOs/01_GPIO_LedBlinky/Gpio_LedBlinky/) :rocket:
+* :rocket:  Source Code: [gpio_ledblinky_project](/gpio/gpio-led-blinky/gpio_ledblinky_project/) :rocket:
 ```C
 /*--------------------------------------*/
 
@@ -76,7 +76,7 @@ while (1) {
 After composed the source code, compiled and flashed it on [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL), I started to debug and test my code. The actual result are measured by Logic Analyzer on PF1 pin - red LED, see as below:
 <p align="center">
   <a href="." title="PWM Waveform">
-    <img src="/GPIOs/01_GPIO_LedBlinky/PWM_Waveform.png" title="PWM Waveform" style="width: 100vw; min-width: 200px"/>
+    <img src="/gpio/gpio-led-blinky/PWM_Waveform.png" title="PWM Waveform" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
@@ -85,7 +85,7 @@ You can see that the software sastifies general requirements.
 With the current setup of delay() function, read LED is blinked with the high frequency, that leads to can't see the it's blinking by eyes. To observe by eyes clearly, I suggest you should increase the value of iter paramter, an input of delay() function, and see the wonderful result.
 <p align="center">
   <a href="." title="Red LED Blinky">
-    <img src="/GPIOs/01_GPIO_LedBlinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
+    <img src="/gpio/gpio-led-blinky/LedBlinky.png" title="Red LED Blinky" style="min-width: 200px"/>
   </a>
 </p>
 

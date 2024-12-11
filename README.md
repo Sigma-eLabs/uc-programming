@@ -1,6 +1,6 @@
 <p align="center">
   <a href="." title="Sigma eLabs">
-    <img src="/Assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/SigmaeLabsBannerv2.png" title="Sigma eLabs" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
@@ -14,27 +14,29 @@ The topics may be simple, but I believe that it is a launchpad for you to approa
 
 <p align="center">
   <a href="." title="Microcontroller Programming">
-    <img src="/Assets/uCprogramming.png" title="Microcontroller Programming" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/uCprogramming.png" title="Microcontroller Programming" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
 # Topics
 Summary of the topics are already available:
-* [GPIOs](/GPIOs/) - GPIO module
+| Topic    | Description |
+| :-------- | :------- |
+| [gpio](/gpio/)  | GPIO module   |
 
 # Requisitions
 ## Hardware
 Development Kit used in the most of topics is [Tiva C Series TM4C123G LaunchPad Evaluation Kit - EK-TM4C123GXL](https://www.ti.com/tool/EK-TM4C123GXL). The main microcontroller on the development kit is ARM Cortex-M4F 32-bit produced by Texas Instruments. Moreover, there is on-board Debugger/Programmer (Stellaris ICDI) that enable user quickly flashes and debugs easily.
 <p align="center">
   <a href="." title="Tiva C Series TM4C123G LaunchPad Evaluation Kit">
-    <img src="/Assets/ek-tm4c123gxl.png" title="Tiva C Series TM4C123G LaunchPad Evaluation Kit" style="min-width: 200px"/>
+    <img src="/assets/ek-tm4c123gxl.png" title="Tiva C Series TM4C123G LaunchPad Evaluation Kit" style="min-width: 200px"/>
   </a>
 </p>
 
 Additionally, during testing và debugging, I also use Logic Analyzer to measure and capture the signal of microcontroller input/output pins.
 <p align="center">
   <a href="." title="Logic Analyzer">
-    <img src="/Assets/LogicAnalyzer.png" title="Logic Analyzer" style="min-width: 200px"/>
+    <img src="/assets/LogicAnalyzer.png" title="Logic Analyzer" style="min-width: 200px"/>
   </a>
 </p>
 
@@ -42,14 +44,14 @@ Additionally, during testing và debugging, I also use Logic Analyzer to measure
 [Keil C](https://www.keil.com/demo/eval/arm.htm) is an IDE developed by ARM company. It is a very powerful tool supports software engineer to compose, edit, compile, flash code and debug. Especially, with non-comercial version, I think it fully supports all your needs to study and research.
 <p align="center">
   <a href="." title="Keil C">
-    <img src="/Assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/KeilC.PNG" title="Keil C" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
 To visualize the measured signals of microcontroller pins from Logic Analyzer and easy to analyze the logs, [Logic 2](https://www.saleae.com/pages/downloads) tool is one of the suitale choice.
 <p align="center">
   <a href="." title="Logic 2">
-    <img src="/Assets/Logic2.PNG" title="Logic 2" style="width: 100vw; min-width: 200px"/>
+    <img src="/assets/Logic2.PNG" title="Logic 2" style="width: 100vw; min-width: 200px"/>
   </a>
 </p>
 
