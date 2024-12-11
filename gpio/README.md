@@ -6,9 +6,6 @@
 
 # GPIO Lessons
 Summary of the topics are already available for GPIO:
-* [GPIO Led Blinky](/gpio/gpio-led-blinky/) - Perform blinking LED and generating simple PWM waveform with specific duty cycle.
-* [GPIO Interrupt with on-board button pressed](/gpio/gpio-interrupt-button-pressed/) - Perform blinking LED for a while when identify the interrupt triggered from GPIO pin.
-
 | Topic    | Description |
 | :-------- | :------- |
 | [GPIO Led Blinky](/gpio/gpio-led-blinky/)  | Perform blinking LED and generating simple PWM waveform with specific duty cycle.   |
